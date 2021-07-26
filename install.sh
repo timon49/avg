@@ -175,7 +175,7 @@ if [ -f "/etc/redhat-release" ]; then
     sys_err_dhcp="no"
     if [ -f $TOTALFILE ]; then
         echo -n "Checking RAM size... "
-        if [ "${memtotal}" -ge "10000" ]; then
+        if [ "${memtotal}" -ge "100" ]; then
         echo -en "\033[1;32mPASS \033[0m\n";tput sgr0
         else
         echo -en "\033[1;31mFAIL \033[0m\n";tput sgr0
@@ -184,7 +184,7 @@ if [ -f "/etc/redhat-release" ]; then
     fi
 
     echo -n "Checking SWAP size... "
-        if [ "${swaptotal}" -ge "20000" ]; then
+        if [ "${swaptotal}" -ge "200" ]; then
         echo -en "\033[1;32mPASS \033[0m\n";tput sgr0
         else
         echo -en "\033[1;31mFAIL \033[0m\n";tput sgr0
@@ -303,7 +303,7 @@ if [[ $vopenvz = "no" ]];then
     sys_err_dhcp="no"
     if [ -f $TOTALFILE ]; then
         echo -n "Checking RAM size... "
-        if [ "${memtotal}" -ge "1000000" ]; then
+        if [ "${memtotal}" -ge "100" ]; then
         echo -en "\033[1;32mPASS \033[0m\n";tput sgr0
         else
         echo -en "\033[1;31mFAIL \033[0m\n";tput sgr0
@@ -312,7 +312,7 @@ if [[ $vopenvz = "no" ]];then
     fi
 
     echo -n "Checking SWAP size... "
-        if [ "${swaptotal}" -ge "2000000" ]; then
+        if [ "${swaptotal}" -ge "200" ]; then
         echo -en "\033[1;32mPASS \033[0m\n";tput sgr0
         else
         echo -en "\033[1;31mFAIL \033[0m\n";tput sgr0
